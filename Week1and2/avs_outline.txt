@@ -1,0 +1,38 @@
+Methods and decorators
+- What a decorator is
+Property decorator
+    @property
+    def x(self):
+        """I'm the 'x' property."""
+        return self._x
+
+    @x.setter
+    def x(self, value):
+        self._x = value
+
+    @x.deleter
+    def x(self):
+        del self._x
+- Importance of functools.wraps.
+- discuss class decorators as well. Can be used to create additional attributes/functions depending on existing attributes/functions.
+- inspect.getcallargs(f, *args, **kwargs)
+- Removing concept of an unbound method from python 3 (but concept of bound method exists still)
+- method's __self__ property for bound methods
+---> [static methods exercise] Important: need to redeclare @staticmethod for the subclasses as well. Staticness not inherited - it's literally just a decorator.
+-->--> Can override static methods in subclasses! Reason not to have it as global thing, cos then if you have some method that calls the static method, have to change that method.
+- Where to use class methods: factories, and if you call other class methods within the class method.
+- In python2, can't mix abstract and static/class methods...
+- [abstract methods exercise]
+- classes parents can be specified indirectly. super iterates over the mro
+- [super exercise].
+
+Functions and generators
+- a generator is an iterable - can be used seamlessly in a for loop! in case that's unclear
+- xrange vs. range
+- why generators: memory (eg: infinite stuff), also dynamic behaviour (random sequence generation)
+- coroutines with yield and send
+- [nested list comprehension exercise]
+- generator/list comprehension syntax for dict and sets
+- enumerate, sorted, any, all, zip
+- functools.partion + operator.le
+- [itertools clarification] itertools combination is actually combination. Itertools compress takes like a list as the second argument. All seem to return iterators.

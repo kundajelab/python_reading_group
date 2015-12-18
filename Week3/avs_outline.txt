@@ -1,0 +1,26 @@
+Finishing hacker's guide:
+- dictionaries from list comprehension
+- set from list comprehension
+- a note on performance of lookup in dict vs set
+- enumerate
+- sorted + keyword
+- any/all
+- zip
+- zip + dict
+- chain(*iterables)
+- combinations(iterable, r)
+- permutations(iterable, r)
+- compress(data, selectors)
+- groupby(iterable, keyfunc) 
+- product(*iterables) 
+- dropwhile/takewhile
+
+
+Assertion error
+-> assert (condition), whatToPrint
+-> NotImplementedError
+-> instanceof to compensate for dynamic typing in python
+-> try / except (Also an else clause which is redundant - why? why is it nice to have?)
+-> "finally" mutually exclusive with "except", but this sounds like a python limitation to me...good use cases: closing file handles, freeing locks
+-> Custom exceptions important for unit testing - check if a particular kind of exception is thrown in a particular place.
+-> Using the "traceback" argument.
