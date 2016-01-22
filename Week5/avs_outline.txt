@@ -1,0 +1,8 @@
+- Python array slices make a copy! (But numpy tries to keep things as views)
+---> Numpy tips: https://ipython-books.github.io/featured-01/
+-> In-place vs. copied ops.
+-> reshape does not have to trigger a copy unless you change the order of cols (otherwise reshape just alters the index-to-mem-location mapping)
+-> do not tile where you can broadcast.
+-> Slicing (with strided selections) in numpy returns a view so no copy (but be careful with mutation...a = np.arange(10), b = a[:5], b*= 2 affects a). But "fancy indexing" (giving a bunch of arrays, one per dimension, that specify the indices for that dimension) is way slower and results in a copy.
+-> np.take can do a selection along one axis faster than fancy indexing.
+-> np.compress for a boolean mask.
