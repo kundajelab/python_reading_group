@@ -1,0 +1,30 @@
+
+-> get method in dict data structure! 
+basket.get(fruit, set())
+-> bool(set(fields) - set(['foo', 'bar']))
+-> collections.defaultdict.
+-> colelctions.OrderedDict. Stack overflow has people who have implemented OrderedDefaultDict.
+-> collections.Counter
+
+python -m cProfile -o myscript.cprof myscript.py
+
+This chapter is a bit overkill for our purposes.
+
+-> bisect: index of insertion in order to keep it sorted. Binary search tree: log(n) insertions AND retrievals (contrast w/ list)
+
+"define a __slots__ attribute that will list the onl4 attributes allowed for instances of this class"
+class Foobar(object):
+    __slots__ = 'x'
+def __init__(self, x):
+self.x = x
+^ a way to substantially reduce mem footprint of classes (to be comparable to namedtuple). So basically, classes are not cheap!
+-> namedtuple (where all the slots have a value on initialisation). Can call list() on named tuple (inherits from tuple!). __slots__ is empty...perk of this is inheritance from tuple? Also slightly faster.
+-> namedtuple has: _asdict, _make (iterable to tuple), _replace (new instance w/ some fields replaced!)
+
+-> functools.lru_cache in python 3.3. But memoisation in general...basically maintaining a cache...can be done via a decorator. There are prob efficient LRU cache implementations out there.
+
+-> PyPy, written in RPython, is a different python interpreter. Places constraints on the Python language in such a way that a variable’s type can be inferred at compile time
+-> Apparently way faster for algorithmic code and 3x for general stuff
+-> "Support for python 3 is underway". Is compatible with python 2.7. Running with PyPy basically requires same kind of coding policy as running w/ diff python version.
+
+- Python array slices make a copy! (But numpy tries to keep things as views)
